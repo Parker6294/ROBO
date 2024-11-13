@@ -1,0 +1,1109 @@
+* {
+  margin: 0; /* Eliminar márgenes de todos los elementos */
+  padding: 0; /* Eliminar relleno de todos los elementos */
+  box-sizing: border-box; /* Para un mejor control del tamaño de los elementos */
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ffffff; /* Fondo blanco para toda la página */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcfcff;
+    z-index: 9999;
+}
+
+.top-image {
+    width: 150px; /* Ajusta el tamaño según tu imagen */
+    margin-bottom: 20px; /* Espaciado entre la imagen y el GIF */
+}
+
+.stretch {
+    width: 200px; /* Aumenta el tamaño del GIF */
+    height: auto; /* Mantiene la proporción */
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards; /* Efecto de desvanecimiento */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#main-content {
+    display: none; /* Inicialmente oculto */
+    opacity: 1; /* Visibilidad inmediata */
+    text-align: center; /* Centramos el texto */
+    padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+
+.btn-wsp{
+  position:fixed;
+  width:60px;
+  height:60px;
+  line-height: 63px;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:35px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  z-index:100;
+  transition: all 300ms ease;
+}
+.btn-wsp:hover{
+  background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+  .btn-wsp{
+      width:63px;
+      height:63px;
+      line-height: 66px;
+}
+}
+
+
+/* Estilos para la sección principal */
+.section-1 {
+  position: relative;
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  display: flex; /* Habilitar flexbox */
+  flex-direction: column; /* Colocar los elementos en columna */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  overflow: hidden; /* Asegurarse de que el contenido no sobresalga */
+  margin: 0; /* Elimina márgenes que puedan haber por defecto */
+}
+
+/* Fondo de video */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* El video se queda atrás */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que el video cubra toda el área sin bordes negros */
+  border: none; /* Elimina el borde alrededor del video */
+}
+
+/* Capa de superposición oscura */
+.section-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Oscurecer el fondo */
+  z-index: 0; /* La capa oscura está detrás del contenido */
+}
+
+/* Contenido sobre el video */
+.overlay {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1; /* Asegura que el contenido se vea encima de la capa de superposición */
+}
+
+.overlay h1, .overlay h2 {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+.overlay .small-text {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.tags {
+  margin-top: 20px;
+}
+
+/* Estilos de los enlaces */
+.tag {
+  background-color: #004585;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #003366;
+}
+
+/* Animaciones y efectos */
+.tracking-in-expand-fwd-top {
+  animation: tracking-in-expand-fwd-top 1s ease-in-out;
+}
+
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.small-text {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Animación de botones */
+.bounce-top {
+  animation: bounce-top 1s ease-in-out infinite;
+}
+
+@keyframes bounce-top {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+.about-section {
+  padding: 50px 20px; /* Espaciado alrededor de la sección */
+  display: flex; /* Usar flexbox para centrar */
+  flex-direction: column; /* Apilar secciones verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+}
+
+.about-content,
+.presence-section {
+  display: flex; /* Usar flexbox para alinear el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  width: 100%; /* Asegurarse de que ocupen todo el ancho */
+  max-width: 1200px; /* Ancho máximo para el contenido */
+  margin: 0 auto; /* Centrar en la página */
+}
+
+.image-right,
+.image-left {
+  flex: 1; /* Ocupa el espacio disponible */
+  text-align: center; /* Centrar la imagen */
+}
+
+.presence-content {
+  flex: 2; /* Ocupar más espacio que la imagen */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.values-section {
+  display: flex; /* Usar flexbox para alinear los cuadros */
+  justify-content: center; /* Centrar los cuadros horizontalmente */
+  gap: 20px; /* Espacio entre los cuadros */
+  flex-wrap: wrap; /* Permitir que los cuadros se envuelvan en pantallas pequeñas */
+}
+
+.about-section {
+  padding: 50px 20px; /* Espaciado alrededor de la sección */
+}
+
+.about-content {
+  display: flex; /* Usar flexbox para alinear el contenido */
+  align-items: center; /* Centrar verticalmente */
+  margin-bottom: 40px; /* Espacio entre la sección "¿Quiénes Somos?" y los cuadros */
+}
+
+.image-right {
+  flex: 1; /* Ocupa el espacio disponible */
+  text-align: center; /* Centrar la imagen */
+}
+
+.image-right img {
+  width: 300px; /* Ajusta el tamaño de la imagen según necesites */
+  max-width: 100%; /* Asegura que la imagen no sobrepase su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.text-content {
+  max-width: 500px; /* Limitar el ancho del texto */
+  margin-left: 20px; /* Espacio entre el texto y la imagen */
+  text-align: justify; /* Justificar el texto */
+}
+
+.presence-section {
+  display: flex; /* Usar flexbox para alinear la imagen y el texto */
+  align-items: center; /* Centrar verticalmente */
+  margin: 40px 0; /* Espacio entre esta sección y las otras */
+}
+
+.image-left {
+  flex: 1; /* Ocupa el espacio disponible */
+  text-align: center; /* Centrar la imagen */
+}
+
+.image-left img {
+  width: 300px; /* Ajusta el tamaño de la nueva imagen */
+  max-width: 100%; /* Asegura que la imagen no sobrepase su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.presence-content {
+  flex: 2; /* Ocupar más espacio que la imagen */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.rodisa-link {
+  display: inline-block; /* Para que se comporte como un cuadro */
+  padding: 10px 15px; /* Espaciado interno */
+  background-color: #004585; /* Color de fondo azul */
+  color: white; /* Color del texto */
+  border-radius: 5px; /* Esquinas redondeadas */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s; /* Transición suave */
+  font-size: 1em; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita para mejorar la visibilidad */
+}
+
+.rodisa-link:hover {
+  background-color: #003366; /* Color más oscuro al pasar el ratón */
+}
+
+.presence-content a:hover {
+  color: #ffffff; /* Color más oscuro al pasar el ratón */
+}
+
+.values-section {
+  display: flex; /* Usar flexbox para alinear los cuadros */
+  justify-content: center; /* Centrar los cuadros horizontalmente */
+  gap: 20px; /* Espacio entre los cuadros */
+}
+
+.value-box {
+  background-color: #f4f4f4; /* Color de fondo para los cuadrados */
+  border: 1px solid #ccc; /* Borde para los cuadrados */
+  border-radius: 8px; /* Esquinas redondeadas */
+  padding: 20px; /* Espaciado interno */
+  width: 250px; /* Ancho fijo para los cuadros */
+  text-align: center; /* Centrar el texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transición suave */
+}
+
+.value-box:hover {
+  transform: scale(1.05); /* Escalar el cuadro al pasar el cursor */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumentar la sombra */
+  background-color: #e0e0e0; /* Cambiar el color de fondo al pasar el cursor */
+}
+
+.value-box h3 {
+  margin-bottom: 10px; /* Espacio entre el título y el texto */
+}
+
+.value-box ul {
+  list-style-type: none; /* Eliminar los puntos de la lista */
+  padding: 0; /* Eliminar el padding por defecto */
+  text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.value-box li {
+  margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+}
+
+@media (max-width: 800px) {
+  .about-content {
+    flex-direction: column; /* Apilar la imagen y el texto en pantallas pequeñas */
+    align-items: center; /* Centrar la imagen y el texto */
+  }
+
+  .text-content {
+    margin-left: 0; /* Eliminar margen izquierdo en móviles */
+    text-align: center; /* Centrar el texto en móviles */
+  }
+
+  .presence-section {
+    flex-direction: column; /* Apilar la imagen y el texto en pantallas pequeñas */
+    align-items: center; /* Centrar la imagen y el texto */
+  }
+
+  .presence-content {
+    margin-left: 0; /* Eliminar margen en móviles */
+    text-align: center; /* Centrar texto en móviles */
+  }
+
+  .values-section {
+    flex-direction: column; /* Apilar los cuadros en pantallas pequeñas */
+    align-items: center; /* Centrar los cuadros */
+  }
+
+  .value-box {
+    width: 80%; /* Ancho más pequeño en móviles */
+    max-width: 400px; /* Ancho máximo en móviles */
+  }
+}
+
+nav {
+  background-color: #164267;
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.1);
+  position: relative; /* Asegúrate de que el menú tenga posición relativa */
+  z-index: 10; /* Z-index alto para que esté por encima */
+  margin-bottom: 0;
+  background-color: #164267;
+  box-shadow: none; /* Asegúrate de que no haya sombra */
+  position: fixed; /* Fijar el menú en la parte superior */
+  top: 0; /* Asegurarse de que esté en la parte superior */
+  left: 0; /* Alinear a la izquierda */
+  width: 100%; /* Ancho completo */
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+nav img {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+nav a:hover {
+  background-color: #004585;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #00458544;
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li {
+  width: 100%;
+}
+.sidebar a {
+  width: 100%;
+}
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  .overlay h1 {
+    font-size: 2em;
+  }
+  .overlay h2 {
+    font-size: 1.5em;
+  }
+  .overlay .small-text {
+    font-size: 1em;
+  }
+}
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+
+
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Espacio entre filas */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en dispositivos más pequeños */
+}
+
+.card {
+  width: 23%; /* Cuatro tarjetas por fila en pantallas grandes */
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s; /* Efecto de animación al pasar el ratón */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+}
+
+.card img {
+  width: 100%; /* Mantiene el ancho al 100% de la tarjeta */
+  height: 150px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Asegura que las imágenes se recorten y mantengan su aspecto */
+  border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.card-content {
+  padding: 15px; /* Espacio alrededor del contenido */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0 5px; /* Margen ajustado */
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px; /* Margen para separación */
+}
+
+
+
+/* Estilos generales para los sliders */
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 150px; /* Ajusta la altura según sea necesario */
+  overflow: hidden;
+}
+
+.slider-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+  opacity: 1;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #004585;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #7d7d7d;
+}
+
+.section-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #004585; /* Color azul para el título */
+  margin: 20px 0; /* Margen superior e inferior para separación */
+  transition: color 0.3s; /* Efecto de transición para el color */
+}
+
+.section-title:hover {
+  color: #7d7d7d; /* Cambio de color al pasar el ratón */
+}
+
+/* Modal */
+.modal {
+  display: none; /* El modal está oculto por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content-container {
+  position: relative;
+  max-width: 90%;  /* Ajusta el modal al 90% del ancho de la pantalla */
+  max-height: 80%; /* Ajusta el modal al 80% de la altura de la pantalla */
+  background-color: #000000;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras sutiles para darle profundidad */
+  padding: 20px;
+  overflow: hidden;
+  text-align: center; /* Centrar el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen dentro del modal */
+.modal-content {
+  width: 100%;   /* Asegura que la imagen ocupe todo el ancho disponible */
+  max-width: 600px; /* Máximo ancho de la imagen */
+  height: auto;   /* Ajuste automático de la altura */
+  border-radius: 8px; /* Bordes redondeados en la imagen */
+  object-fit: contain; /* Asegura que la imagen no se distorsione */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Descripción de la imagen */
+#caption {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #333; /* Color de texto más oscuro para mejor legibilidad */
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5; /* Para evitar que las líneas del texto estén demasiado juntas */
+  padding: 10px;
+}
+
+/* Botón de cierre */
+.close {
+  background-color: #004585;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil al botón */
+}
+
+.close:hover {
+  background-color: #7d7d7d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  /* Aseguramos que el modal ocupe menos espacio en pantallas medianas (tabletas y dispositivos de tamaño similar) */
+  .modal-content-container {
+    max-width: 85%;  /* El modal ocupará un 85% del ancho */
+    max-height: 70%; /* Reduce la altura máxima del modal */
+  }
+
+  .modal-content {
+    max-width: 80%; /* Reducimos aún más el tamaño de la imagen */
+  }
+
+  #caption {
+    font-size: 16px; /* Texto más pequeño en pantallas medianas */
+  }
+
+  .close {
+    font-size: 16px; /* Reducimos el tamaño del botón de cierre */
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para pantallas más pequeñas (teléfonos móviles) */
+  .modal-content-container {
+    max-width: 95%; /* Asegura que el modal ocupe casi todo el ancho */
+    max-height: 80%; /* No se hace más pequeño en altura */
+  }
+
+  .modal-content {
+    max-width: 100%; /* La imagen ocupará todo el ancho disponible */
+  }
+
+  #caption {
+    font-size: 14px; /* Texto más pequeño para pantallas pequeñas */
+  }
+
+  .close {
+    font-size: 14px; /* Reducimos el tamaño del botón de cierre */
+    padding: 8px 16px; /* Botón más pequeño */
+  }
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .card {
+    width: 48%; /* Dos tarjetas por fila en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+  }
+}
+
+
+
+
+/* Estilo general de la sección */
+.aliados-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+
+}
+
+/* Título */
+.aliados-section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Estilo para los botones de aliados */
+.botones-aliados {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.botones-aliados button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.botones-aliados button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.botones-aliados button img {
+  max-width: 150px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+/* Estilo para el contenedor principal */
+.informacion-aliado {
+  display: flex;
+  flex-direction: column; /* Apila los elementos (imagen y texto) en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  gap: 20px; /* Espacio entre los elementos (imagen y texto) */
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  width: 100%; /* Asegura que ocupe todo el espacio disponible */
+  max-width: 800px; /* Ajusta el ancho máximo si es necesario */
+  margin: 0 auto; /* Centra el contenedor */
+  text-align: center; /* Centra el texto */
+}
+
+/* Estilo para la imagen */
+.imagen-aliado img {
+  width: 300px; /* Ancho de la imagen */
+  height: 200px; /* Altura de la imagen */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border-radius: 8px;
+}
+
+/* Estilo para el texto */
+.texto-aliado {
+  text-align: justify; /* Justifica el texto */
+  text-justify: inter-word; /* Mejora la justificación para un mejor flujo de texto */
+  padding: 0 10px; /* Añadimos un pequeño padding para que no toque los bordes */
+  line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+  width: 100%; /* Asegura que el texto ocupe todo el ancho del contenedor */
+}
+
+/* Estilo para el enlace "Más información" como un botón */
+.texto-aliado a {
+  display: inline-block; /* Hace que el enlace se comporte como un bloque */
+  background-color: #004585; /* Fondo azul para que parezca un botón */
+  color: #ffffff; /* Texto blanco */
+  padding: 12px 24px; /* Espaciado interno para un buen tamaño */
+  text-decoration: none; /* Elimina subrayado */
+  font-size: 1.1rem; /* Tamaño de fuente adecuado */
+  font-weight: 500; /* Un poco de peso para que se vea sólido */
+  border-radius: 4px; /* Bordes redondeados para el botón */
+  text-align: center; /* Alineación del texto */
+  margin-top: 20px; /* Espacio superior para separarlo del texto */
+  transition: all 0.3s ease; /* Transición suave para los efectos */
+  width: 200px; /* El botón tendrá el tamaño adecuado */
+  margin: 5% 37.5% ; /* Centra el botón horizontalmente */
+}
+
+/* Efectos al pasar el mouse */
+.texto-aliado a:hover {
+  background-color: #1d72b8; /* Fondo más oscuro al pasar el mouse */
+  color: #ffffff; /* Mantener el texto blanco */
+  transform: translateY(-3px); /* Efecto de elevación */
+}
+
+.texto-aliado a:focus {
+  outline: none; /* Quitar el borde de enfoque */
+  box-shadow: 0 0 5px 2px rgba(52, 152, 219, 0.6); /* Añadir sombra cuando está enfocado */
+}
+
+
+
+
+.linkedin-btn, .facebook-btn, .instagram-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0077b5; /* Color de LinkedIn */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 2rem; /* Ajustado para ser más responsivo */
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.facebook-btn {
+  background-color: #3b5998; /* Color de Facebook */
+}
+
+.instagram-btn {
+  background-color: #E1306C; /* Color de Instagram */
+}
+
+.linkedin-btn:hover {
+  background-color: #005582;
+}
+
+.facebook-btn:hover {
+  background-color: #2d4373;
+}
+
+.instagram-btn:hover {
+  background-color: #C13584; /* Color más oscuro al pasar el mouse */
+}
+
+.linkedin-btn i, .facebook-btn i, .instagram-btn i {
+  margin: 0;
+}
+
+.btn-text {
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
+  font-size: 1rem; /* Ajustado para ser más responsivo */
+  margin-top: 5px;
+}
+
+.linkedin-btn:hover .btn-text,
+.facebook-btn:hover .btn-text,
+.instagram-btn:hover .btn-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.follow-title {
+  margin-bottom: 20px;
+  font-size: 2rem; /* Ajustado para ser más responsivo */
+  font-weight: bold;
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  flex-wrap: wrap; /* Permitir que los botones se envuelvan en pantallas más pequeñas */
+}
+
+.social-buttons > div {
+  margin: 10px; /* Cambiado a 10px para mejor distribución */
+}
+
+@media (max-width: 600px) {
+  .linkedin-btn, .facebook-btn, .instagram-btn {
+    width: 50px; /* Tamaño más pequeño en pantallas pequeñas */
+    height: 50px;
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+  }
+
+  .btn-text {
+    font-size: 0.8rem; /* Texto más pequeño */
+  }
+
+  .follow-title {
+    font-size: 1.5rem; /* Título más pequeño */
+  }
+}
+
+
+
+/* Footer */
+footer {
+  position: relative;
+  width: 100%;
+  background: #004585; /* Color de fondo */
+  min-height: 150px; /* Ajusta la altura si es necesario */
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px; /* Separación del footer */
+}
+
+footer .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: left; /* Alineación a la izquierda */
+  margin-bottom: 15px; /* Espaciado inferior */
+}
+
+footer .info p {
+  margin: 0 15px; /* Espaciado entre icono y texto */
+  font-size: 1em;
+}
+
+footer .info i {
+  margin-right: 5px; /* Espaciado entre el icono y el texto */
+  font-size: 1.5em; /* Tamaño del icono */
+}
+
+footer .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Espaciado inferior de los iconos */
+}
+
+footer .icons i {
+  margin: 0 15px; /* Espaciado entre iconos */
+  font-size: 2em; /* Tamaño del icono */
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.info div {
+  display: flex;
+  align-items: center;
+}
+
+.info i {
+  font-size: 2em; /* Ajusta el tamaño del icono */
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+footer .social_icons,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social_icons li,
+footer .menu li {
+  list-style: none;
+}
+
+footer .social_icons li a {
+  font-size: 2em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+footer .social_icons li a:hover {
+  transform: translateY(-10px);
+}
+
+footer .menu li a {
+  font-size: 1em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+footer .menu li a:hover {
+  opacity: 1;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+footer p a {
+  text-decoration: none;
+  color: white;
+}
+
+footer p ion-icon {
+  color: red;
+  font-size: 1em;
+  display: inline-block;
+  margin-bottom: -2px;
+}
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(../Iconos/wave.png);
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}

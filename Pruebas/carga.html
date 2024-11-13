@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Animado - Deslizante</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .contador {
+            font-size: 100px;
+            font-weight: bold;
+            color: #333;
+            padding: 20px;
+            border: 5px solid #00bcd4;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: inline-block;
+            position: relative;
+        }
+
+        @keyframes deslizarArriba {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(-30px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .contador span {
+            display: inline-block;
+            animation: deslizarArriba 1s ease-in-out forwards;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contador">
+        <span id="numero">1</span>
+    </div>
+
+    <script>
+        let count = 1;
+        const maxCount = 10;
+        const numeroElemento = document.getElementById('numero');
+
+        function animarContador() {
+            count++;
+            numeroElemento.textContent = count;
+            numeroElemento.style.animation = 'none'; // Resetear la animación
+            numeroElemento.offsetHeight; // Forzar reflow para reiniciar la animación
+            numeroElemento.style.animation = 'deslizarArriba 1s ease-in-out forwards';
+
+            if (count < maxCount) {
+                setTimeout(animarContador, 1000); // Esperar 1 segundo antes de actualizar
+            }
+        }
+
+        // Iniciar animación al cargar la página
+        setTimeout(animarContador, 1000);
+    </script>
+</body>
+</html>

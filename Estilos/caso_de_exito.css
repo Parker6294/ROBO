@@ -1,0 +1,438 @@
+* {
+  margin: 0; /* Eliminar márgenes de todos los elementos */
+  padding: 0; /* Eliminar relleno de todos los elementos */
+  box-sizing: border-box; /* Para un mejor control del tamaño de los elementos */
+}
+
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  z-index: 9999;
+}
+
+.top-image {
+  width: 150px; /* Ajusta el tamaño según tu imagen */
+  margin-bottom: 20px; /* Espaciado entre la imagen y el GIF */
+}
+
+.stretch {
+  width: 200px; /* Aumenta el tamaño del GIF */
+  height: auto; /* Mantiene la proporción */
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards; /* Efecto de desvanecimiento */
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+
+body {
+  min-height: 100vh;
+  background-color: white; /* Fondo blanco para toda la página */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+nav{
+  background-color: #004585;
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.1);
+  position: relative; /* Asegúrate de que el menú tenga posición relativa */
+  z-index: 10; /* Z-index alto para que esté por encima */
+  margin-bottom: 0;
+  background-color: #004585;
+  box-shadow: none; /* Asegúrate de que no haya sombra */
+  position: fixed; /* Fijar el menú en la parte superior */
+  top: 0; /* Asegurarse de que esté en la parte superior */
+  left: 0; /* Alinear a la izquierda */
+  width: 100%; /* Ancho completo */
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */  
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+nav img{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+nav a:hover{
+  background-color: #004585;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #00458544;
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-button{
+  display: none;
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  .overlay h1 {
+    font-size: 2em;
+  }
+  .overlay h2 {
+    font-size: 1.5em;
+  }
+  .overlay .small-text {
+    font-size: 1em;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+
+
+.aliados-section {
+  padding: 50px 20px; /* Espaciado alrededor de la sección */
+  background-color: #f4f4f4; /* Color de fondo suave */
+  text-align: center; /* Centrar el texto */
+}
+
+.aliados-section h2 {
+  font-size: 2em; /* Tamaño del título */
+  margin-bottom: 30px; /* Espacio debajo del título */
+  color: #004585; /* Color del título */
+}
+
+.botones-aliados {
+  display: flex; /* Usar flexbox para los botones */
+  flex-wrap: wrap; /* Permitir que los botones se envuelvan */
+  justify-content: center; /* Centrar los botones */
+  gap: 20px; /* Espacio entre botones */
+  margin-bottom: 30px; /* Espacio debajo de los botones */
+}
+
+.botones-aliados button {
+  border: none; /* Sin borde */
+  background: transparent; /* Fondo transparente */
+  cursor: pointer; /* Cursor en forma de mano */
+  transition: transform 0.3s; /* Transición suave */
+  flex: 0 0 calc(25% - 15px); /* Ancho del 25% menos espacio del gap */
+  max-width: 150px; /* Ancho máximo para mantener las proporciones */
+}
+
+@media (max-width: 800px) {
+  .botones-aliados button {
+    flex: 0 0 calc(50% - 10px); /* Ancho del 50% para pantallas medianas */
+  }
+}
+
+@media (max-width: 500px) {
+  .botones-aliados button {
+    flex: 0 0 calc(100% - 10px); /* Ancho del 100% para pantallas pequeñas */
+  }
+}
+
+
+.botones-aliados button:hover {
+  transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+.botones-aliados img {
+  width: 150px; /* Tamaño de las imágenes de los botones */
+  height: auto; /* Mantener proporción */
+}
+
+.informacion-aliado {
+  display: flex; /* Usar flexbox para alinear imagen y texto */
+  justify-content: center; /* Centrar el contenido */
+  align-items: center; /* Centrar verticalmente */
+  margin-top: 20px; /* Espacio encima */
+}
+
+.informacion-aliado img {
+  width: 300px; /* Ancho de la imagen del aliado */
+  height: auto; /* Mantener proporción */
+  margin-right: 20px; /* Espacio a la derecha */
+}
+
+.informacion-aliado p {
+  max-width: 500px; /* Ancho máximo del texto */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.informacion-aliado a {
+  display: inline-block; /* Para que se comporte como botón */
+  margin-top: 15px; /* Espacio encima */
+  padding: 10px 15px; /* Espaciado interno */
+  background-color: #004585; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 5px; /* Esquinas redondeadas */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.informacion-aliado a:hover {
+  background-color: #003366; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 800px) {
+  .botones-aliados {
+    flex-direction: column; /* Apilar los botones verticalmente */
+    gap: 10px; /* Espacio reducido entre botones */
+  }
+
+  .informacion-aliado {
+    flex-direction: column; /* Apilar imagen y texto verticalmente */
+    align-items: center; /* Centrar el contenido */
+  }
+
+  .informacion-aliado img {
+    margin-right: 0; /* Eliminar margen derecho */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+    width: 80%; /* Ajustar ancho de imagen en móviles */
+  }
+}
+
+@media (max-width: 400px) {
+  .aliados-section h2 {
+    font-size: 1.5em; /* Reducir tamaño del título en pantallas muy pequeñas */
+  }
+
+  .informacion-aliado p {
+    font-size: 0.9em; /* Reducir tamaño del texto */
+  }
+}
+
+
+/* Footer */
+footer {
+  position: relative;
+  width: 100%;
+  background: #004585; /* Color de fondo */
+  min-height: 150px; /* Ajusta la altura si es necesario */
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px; /* Separación del footer */
+}
+
+footer .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: left; /* Alineación a la izquierda */
+  margin-bottom: 15px; /* Espaciado inferior */
+}
+
+footer .info p {
+  margin: 0 15px; /* Espaciado entre icono y texto */
+  font-size: 1em;
+}
+
+footer .info i {
+  margin-right: 5px; /* Espaciado entre el icono y el texto */
+  font-size: 1.5em; /* Tamaño del icono */
+}
+
+footer .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Espaciado inferior de los iconos */
+}
+
+footer .icons i {
+  margin: 0 15px; /* Espaciado entre iconos */
+  font-size: 2em; /* Tamaño del icono */
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.info div {
+  display: flex;
+  align-items: center;
+}
+
+.info i {
+  font-size: 2em; /* Ajusta el tamaño del icono */
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+footer .social_icons, footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social_icons li, footer .menu li {
+  list-style: none;
+}
+
+footer .social_icons li a {
+  font-size: 2em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+footer .social_icons li a:hover {
+  transform: translateY(-10px);
+}
+
+footer .menu li a {
+  font-size: 1em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+footer .menu li a:hover {
+  opacity: 1;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+footer p a {
+  text-decoration: none;
+  color: white;
+}
+
+footer p ion-icon {
+  color: red;
+  font-size: 1em;
+  display: inline-block;
+  margin-bottom: -2px;
+}
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(../Iconos/wave.png);
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+  0% {
+      background-position-x: 1000px;
+  }
+  100% {
+      background-position-x: 0;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+      background-position-x: 0;
+  }
+  100% {
+      background-position-x: 1000px;
+  }
+}

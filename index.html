@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="shortcut icon" href="Iconos/icono.ico" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robotica y Diseño</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM4RY+gY2ZpN7sZ/CdV6s4BX7EJ2k5GZ0qqB7s"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/eb496ab1a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="Estilos/style.css" />
+  </head>
+
+  <body>
+
+    <div id="loading-screen">
+      <img src="loader.gif" alt="Emplayando" class="stretch" id="stretch" />
+    </div>
+
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26"
+              fill="#FFFFFF"
+            >
+              <path
+                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes_somos.html">Quienes Somos</a></li>
+        <li><a href="caso_de_exito.html">Casos de Exito</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li>
+          <a
+            href="https://unglobalcompact.org/what-is-gc/participants/148382-Robotica-y-Dise-o-SA-de-CV"
+            >sustentabilidad</a
+          >
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <img
+            src="https://github.com/Parker6294/Imagenes/blob/main/Logos/Logo_header.png?raw=true"
+            alt=""
+          />
+        </li>
+        <li class="hideOnMobile"><a href="index.html">Inicio</a></li>
+        <li class="hideOnMobile">
+          <a href="quienes_somos.html">Quienes Somos</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="caso_de_exito.html">Casos de Exito</a>
+        </li>
+        <li class="hideOnMobile"><a href="productos.html">Productos</a></li>
+        <li class="hideOnMobile"><a href="servicios.html">Servicios</a></li>
+        <li class="hideOnMobile"><a href="Contacto.html">Contacto</a></li>
+        <li class="hideOnMobile">
+          <a
+            href="https://unglobalcompact.org/what-is-gc/participants/148382-Robotica-y-Dise-o-SA-de-CV"
+            >Sustentabilidad</a
+          >
+        </li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#FFFFFF"
+            >
+              <path
+                d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- boton de whatsapp -->
+    <a
+      href="https://api.whatsapp.com/send?phone=525542184625"
+      class="btn-wsp"
+      target="_blank"
+    >
+      <i class="fa fa-whatsapp icono"></i>
+    </a>
+
+    <div class="section-1">
+      <div class="video-background">
+        <video autoplay loop muted playsinline>
+          <source src="imagenes/Fondo.mp4" type="video/mp4">
+          Tu navegador no soporta el formato de video.
+        </video>
+      </div>
+      <div class="overlay">
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+          <h1 class="tracking-in-expand-fwd-top">Somos Ingeniería</h1>
+        </div>
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+          <h2 class="tracking-in-expand-fwd-top">en Empaque</h2>
+        </div>
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+          <p class="small-text">Propuestas de Eficiencia con Soluciones Integrales</p>
+        </div>
+        <div class="tags">
+          <a href="productos.html" class="tag bounce-top" class="heartbeat">Productos</a>
+          <a href="Contacto.html" class="tag bounce-top">Contactos</a>
+        </div>
+      </div>
+    </div>
+    
+  
+    <section class="about-section">
+      <div class="about-content">
+        <div class="text-content">
+          <h2>¿Quiénes Somos?</h2>
+          <p>
+            Somos una empresa 100% mexicana, fundada en 2004, dedicada a ofrecer
+            soluciones innovadoras y de alta calidad. Con sede en Cuautitlán
+            Izcalli, Estado de México, contamos con un equipo altamente
+            capacitado y una sólida infraestructura que nos permite distribuir
+            nuestros productos a todo México y Centroamérica. Nos enorgullece
+            ser un referente en la industria, contribuyendo al crecimiento del
+            sector y garantizando la satisfacción de nuestros clientes a través
+            de un servicio excepcional. ¡Descubre la calidad que nos
+            distingue!<br /><br />
+          </p>
+        </div>
+        <div class="image-right" data-aos="fade-left">
+          <img
+            loading="lazy"
+            src="https://github.com/Parker6294/Imagenes/blob/main/Logos/Logo_original.jpg?raw=true"
+            alt="Quiénes Somos"
+          />
+        </div>
+      </div>
+
+      <div class="presence-section">
+        <div class="image-left" data-aos="fade-right">
+          <img
+            loading="lazy"
+            src="https://github.com/Parker6294/Imagenes/blob/main/Logos/Logo_americas.jpg?raw=true"
+            alt="Presencia en Estados Unidos"
+          />
+        </div>
+        <div class="presence-content">
+          <p>
+            Tenemos presencia en Estados Unidos con nuestra empresa hermana
+            <a
+              href="https://rodisainc.com/#about"
+              target="_blank"
+              class="rodisa-link"
+              >RODISA AMERICAS</a
+            >.
+          </p>
+        </div>
+      </div>
+
+      <div class="values-section">
+        <div data-aos="fade-right" class="value-box">
+          <h3>Misión</h3>
+          <p>
+            Proveer material, equipos y servicios para empaque y embalaje, con
+            el compromiso de ser una solución integral para nuestros clientes.
+          </p>
+        </div>
+        <div data-aos="fade-up" class="value-box">
+          <h3>Visión</h3>
+          <p>
+            Ser una empresa líder en soluciones de empaque y embalaje,
+            incrementando nuestra presencia en el mercado nacional y extranjero.
+            Ser una empresa que contribuya con sus productos y servicios a la
+            sustentabilidad. Ser una empresa que atraiga, desarrolle y retenga a
+            gente excepcional.
+          </p>
+        </div>
+        <div data-aos="fade-left" class="value-box">
+          <h3>Valores</h3>
+          <ul>
+            <li>Integridad</li>
+            <li>Confianza</li>
+            <li>Responsabilidad</li>
+            <li>Respeto</li>
+            <li>Lealtad</li>
+            <li>Trabajo en Equipo</li>
+            <li>Compromiso</li>
+            <li>Renovación</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Tarjetas -->
+    <section>
+    <!-- Modal para mostrar la imagen -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content-container">
+      <img class="modal-content" id="modalImage" />
+      <div id="caption"></div>
+      <button class="close" onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Sección de Películas Stretch -->
+    <div data-aos="fade-right">
+      <h2 class="section-title">Película Stretch</h2>
+      <div class="row">
+        <div class="card">
+          <div class="card-content">
+            <img src="https://fis-pack.com/wp-content/uploads/2023/03/playo-automatica-1024x682.jpg" alt="Producto 1" />
+            <h2 class="card-title">Automatico(Ultra)</h2>
+            <p class="card-description">Descripción breve del producto.</p>
+            <!-- Botón que abre el modal y muestra una imagen diferente -->
+            <button class="button" onclick="openModal('imagenes/tabla.png', 'Pelicula 1')">Ver Producto</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_730566-MLM77904853553_072024-O.webp" alt="Producto 2" />
+            <h2 class="card-title">Manual(Cast)</h2>
+            <p class="card-description">Descripción breve del producto.</p>
+            <!-- Botón que abre el modal y muestra una imagen diferente -->
+            <button class="button" onclick="openModal('imagenes/tabla.png', 'Pelicula 2')">Ver Producto</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <img src="https://peliculaestirablemexico.com.mx/images/pelicula-de-colores-disponibles.jpg" alt="Producto 3" />
+            <h2 class="card-title">Pigmentado(Manual)</h2>
+            <p class="card-description">Descripción breve del producto.</p>
+            <!-- Botón que abre el modal y muestra una imagen diferente -->
+            <button class="button" onclick="openModal('imagenes/tabla.png', 'Pelicula 3')">Ver Producto</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <img src="https://blog.packsys.com/wp-content/uploads/2023/12/pelicula-PCR.jpg" alt="Producto 4" />
+            <h2 class="card-title">Ecológico(Manual)</h2>
+            <p class="card-description">Descripción breve del producto.</p>
+            <!-- Botón que abre el modal y muestra una imagen diferente -->
+            <button class="button" onclick="openModal('imagenes/tabla.png', 'Pelicula 4')">Ver Producto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Cintas -->
+    <div data-aos="fade-left">
+      <h2 class="section-title">Cintas</h2>
+      <div class="row">
+
+        <!-- Card 1: Cinta BOPP -->
+        <div class="card">
+          <div class="card-content">
+            <div class="image-slider" id="slider-cinta-bopp">
+              <img src="imagenes/Cintas_Inicio/bob1.png" alt="Cinta BOPP" class="slider-image">
+              <img src="imagenes/Cintas_Inicio/bob2.png" alt="Cinta BOPP 2" class="slider-image">
+              <img src="imagenes/Cintas_Inicio/bob3.png" alt="Cinta BOPP 3" class="slider-image">
+            </div>
+            <h2 class="card-title">Cinta BOPP</h2>
+            <p class="card-description">La cinta BOPP también es conocida como cinta de empaque o cinta de sellado. Se utiliza habitualmente en envíos, paquetería y embalaje, así como cinta multifuncional de uso doméstico.</p>
+            <!-- Botón que abre el modal y muestra una imagen diferente -->
+            <button class="button" onclick="openModal('imagenes/tabla.png', 'Cinta 1')">Más Información</button>
+          </div>
+        </div>
+
+        <!-- Card 2: Cinta Multicolor -->
+        <div class="card">
+          <div class="card-content">
+            <div class="image-slider" id="slider-cinta-multicolor">
+              <img src="imagenes/Cintas_Inicio/col1.png" alt="Cinta Multicolor" class="slider-image">
+              <img src="imagenes/Cintas_Inicio/col2.png" alt="Cinta Multicolor 2" class="slider-image">
+              <img src="imagenes/Cintas_Inicio/col3.png" alt="Cinta Multicolor 3" class="slider-image">
+            </div>
+            <h2 class="card-title">Cinta Multicolor</h2>
+            <p class="card-description">Descripción breve del producto.</p>
+            <!-- Botón que abre el modal y muestra una imagen diferente -->
+            <button class="button" onclick="openModal('imagenes/tabla.png', 'Cinta 2')">Más Información</button>
+          </div>
+        </div>
+
+        <!-- Card 3: Cinta biodegradable -->
+        <div class="card">
+          <div class="card-content">
+            <div class="image-slider" id="slider-cinta-biodegradable">
+              <img src="imagenes/Cintas_Inicio/bio1.jpg" alt="Cinta 3" class="slider-image">
+              <img src="imagenes/Cintas_Inicio/bio2.jpg" alt="Cinta 3" class="slider-image">
+              <img src="imagenes/Cintas_Inicio/bio3.jpg" alt="Cinta 3" class="slider-image">
+            </div>
+            <h2 class="card-title">Cinta Biodegradable</h2>
+            <p class="card-description">Fabricada con recina de manera natural y sin revestimiento de plastico. Una opcion ideal para precintar cajas, paquetes y sobres.</p>
+            <!-- Botón que abre el modal y muestra una imagen diferente -->
+            <button class="button" onclick="openModal('imagenes/tabla.png', 'Cinta 3')">Mas Informacion</button>
+          </div>
+        </div>
+
+        <!-- Card 3: Cinta gorila -->
+        <div class="card">
+          <div class="card-content">
+            <div class="image-slider" id="slider-cinta-gorila">
+              <img src="imagenes/Cintas_Inicio/go1.png" alt="Cinta Gorila" class="slider-image">
+            </div>
+            <h2 class="card-title">Cinta Gorila</h2>
+            <p class="card-description">Descripción breve del producto.</p>
+            <!-- Botón que abre el modal y muestra una imagen diferente -->
+            <button class="button" onclick="openModal('imagenes/tabla.png', 'Cinta 4')">Más Información</button>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+
+  </div>
+    </section>
+
+    
+    <!-- Aliados -->
+    <section>
+    <div class="aliados-section">
+      <h2>Aliados Estratégicos</h2>
+      <div class="botones-aliados">
+        <button onclick="mostrarInformacion('aliadoA')">
+          <img
+            loading="lazy"
+            src="https://www.atlantastretch.com/wp-content/uploads/2024/06/NEW-Logo-Atlanta-1.png"
+            alt="Aliado A"
+          />
+        </button>
+        <button onclick="mostrarInformacion('aliadoB')">
+          <img
+            loading="lazy"
+            src="https://comarmesrl.com/wp-content/uploads/2021/07/Noback-perfectsize-1024x307.png"
+            alt="Aliado B"
+          />
+        </button>
+        <button onclick="mostrarInformacion('aliadoC')">
+          <img
+            loading="lazy"
+            src="https://lh4.googleusercontent.com/proxy/OXhbDSP8NxBKJiElowbi5WSxck9GZk6D623Cq10dEtmc7gMwM-t0vniXaSzqAx7pXMNK-2ZzPLcQOlF-M0p7uLF6xjWW"
+            alt="Aliado C"
+          />
+        </button>
+      </div>
+      <div class="informacion-aliado" data-aos="flip-up" data-aos-duration="2000" id="informacion-aliado">
+        <!-- Contenedor para la imagen -->
+        <div class="imagen-aliado">
+          <img id="imagen-aliado" src="ruta-a-la-imagen.jpg" alt="Imagen del aliado" />
+        </div>
+      
+        <!-- Contenedor para el texto -->
+        <div class="texto-aliado" >
+          <p id="texto-aliado">Este es el contenido textual del aliado. Aquí va la descripción y la información relevante.</p>
+          <a id="link-aliado" href="#" target="_blank">Más información</a>
+        </div>
+      </div>
+      
+      
+    </div>
+    </section>
+    
+
+    <section class="social-section">
+      <h2 class="follow-title">¡Síguenos!</h2>
+
+      <div class="social-buttons">
+        <div>
+          <a
+            href="https://www.facebook.com/people/Rodisa/61565475339428/?rdid=NmdyanONlTYWfWtT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FArC7ieTqpsAt8zNm%2F"
+            class="btn facebook-btn"
+            aria-label="Ir a Facebook"
+          >
+          <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+
+        <div>
+          <a
+            href="https://www.instagram.com/tu_usuario/"
+            class="btn instagram-btn"
+            aria-label="Ir a Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+        <div>
+          <a
+            href="https://mx.linkedin.com/company/robotica-y-dise%C3%B1o-s-a-de-c-v-"
+            class="btn-f linkedin-btn"
+            aria-label="Ir a LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <div class="info">
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          <p>
+            Michel Faraday 4,<br />Parque Industrial Cuamatla,<br />Cuautitlán
+            Izcalli,<br />Estado de México
+          </p>
+        </div>
+        <div>
+          <i class="fa-solid fa-phone"></i>
+          <p>55 5881 1277</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope"></i>
+          <p>ventas@rodisacv.com</p>
+        </div>
+      </div>
+      <p>
+        <a href="">Robotica y Diseño</a>
+        <script>
+          ano = new Date();
+          document.write(ano.getFullYear());
+        </script>
+        &copy; Todos los derechos reservados!
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+      });
+    </script>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+    <script src="javascript/pantalla_incio.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
