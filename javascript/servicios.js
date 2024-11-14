@@ -48,7 +48,7 @@ function showService(service) {
           </ul>
         </div>`;
       imageSources = [
-        "../Imagenes/servicios/vic1.jpg",
+        "https://github.com/Parker6294/ROBO/blob/main/imagenes/Servicios/vic1.jpg?raw=true",
         "Imagenes/servicios/vic2.jpg",
         "Imagenes/servicios/vic3.jpg",
         "Imagenes/servicios/vic4.jpg"
