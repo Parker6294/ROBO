@@ -48,7 +48,7 @@ function showService(service) {
           </ul>
         </div>`;
       imageSources = [
-        "Imagenes/servicios/vic1.jpg",
+        "../Imagenes/servicios/vic1.jpg",
         "Imagenes/servicios/vic2.jpg",
         "Imagenes/servicios/vic3.jpg",
         "Imagenes/servicios/vic4.jpg"
