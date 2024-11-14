@@ -48,10 +48,10 @@ function showService(service) {
           </ul>
         </div>`;
       imageSources = [
-        "imagenes/servicios/vic1.jpg",
-        "imagenes/servicios/vic2.jpg",
-        "imagenes/servicios/vic3.jpg",
-        "imagenes/servicios/vic4.jpg"
+        "https://github.com/Parker6294/ROBO/blob/main/imagenes/Servicios/vic1.jpg?raw=true",
+        "https://github.com/Parker6294/ROBO/blob/main/imagenes/Servicios/vic2.jpg?raw=true",
+        "https://github.com/Parker6294/ROBO/blob/main/imagenes/Servicios/vic3.jpg?raw=true",
+        "https://github.com/Parker6294/ROBO/blob/main/imagenes/Servicios/vic4.jpg?raw=true"
       ];
       carouselId = "consultoria-carousel";
       break;
